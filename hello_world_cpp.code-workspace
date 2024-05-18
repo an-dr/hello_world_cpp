@@ -1,0 +1,65 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "Configure",
+                "type": "shell",
+                "command": "cmake",
+                "args": [
+                    "-G",
+                    "Ninja",
+                    "-B",
+                    "${workspaceFolder}/build",
+                    "-DCMAKE_BUILD_TYPE=Debug",
+                ],
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                },
+                "problemMatcher": [ "$gcc" ]
+            },
+            {
+                "label": "Build",
+                "type": "shell",
+                "command": "cmake",
+                "args": [
+                    "--build",
+                    "${workspaceFolder}/build"
+                ],
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                },
+                "problemMatcher": [ "$gcc" ],
+                "dependsOn": "Configure"
+            },
+            {
+                "label": "Install",
+                "type": "shell",
+                "command": "cmake",
+                "args": [
+                    "--install",
+                    "${workspaceFolder}/build",
+                    "--prefix",
+                    "${workspaceFolder}/install"
+                ],
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                },
+                "problemMatcher": [ "$gcc" ],
+                "dependsOn": "Build"
+            }
+            
+        ]
+    }
+}
