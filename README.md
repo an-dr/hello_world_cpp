@@ -1,2 +1,3 @@
 # hello_world_cpp
-A template C++ repository
+
+This is a simple hello world program in C++. The repo contains all necessary configuration files for starting a new C++ project including formatting and linting.
