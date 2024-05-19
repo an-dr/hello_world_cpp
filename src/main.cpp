@@ -9,21 +9,21 @@
 #include <vector>
 
 class Hello {
- public:
-  void sayHelloWorld() { sayHello("World"); }
+  public:
+    void sayHelloWorld() { sayHello("World"); }
 
-  void sayHelloSomething(const char *smth) { sayHello(smth); }
+    void sayHelloSomething(const char *smth) { sayHello(smth); }
 
- private:
-  void sayHello(const char *smth) { printf("Hello, %s!\n", smth); }
+  private:
+    void sayHello(const char *smth) { printf("Hello, %s!\n", smth); }
 };
 
 int main(int argc, char *argv[]) {
-  Hello talker;
-  if (argc > 1) {
-    talker.sayHelloSomething(argv[1]);
-  } else {
-    talker.sayHelloWorld();
-  }
-  return 0;
+    Hello talker;
+    if (argc > 1) {
+        talker.sayHelloSomething(argv[1]);
+    } else {
+        talker.sayHelloWorld();
+    }
+    return 0;
 }
