@@ -5,7 +5,6 @@
 #include "project_include.hpp"
 #include <iostream>
 #include <stdio.h>
-#include <system_include.hpp>
 #include <vector>
 
 class Hello {
