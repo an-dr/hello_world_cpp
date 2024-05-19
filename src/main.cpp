@@ -9,12 +9,12 @@
 #include <vector>
 
 class Hello {
-  public:
+ public:
     void sayHelloWorld() { sayHello("World"); }
 
     void sayHelloSomething(const char *smth) { sayHello(smth); }
 
-  private:
+ private:
     void sayHello(const char *smth) { printf("Hello, %s!\n", smth); }
 };
 
