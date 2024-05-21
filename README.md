@@ -5,5 +5,6 @@ This is a simple hello world program in C++. The repo contains all necessary con
 Requirements:
 
 - CMake
+- cmake-format
 - clang-format
 - clang-tidy

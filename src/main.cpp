@@ -1,11 +1,11 @@
 // Copyright (c) 2024 Andrei Gramakov. All rights reserved.
 
 #include "main.hpp"
+#include <cstdio>
+#include <iostream>
+#include <vector>
 #include "project_include.h"
 #include "project_include.hpp"
-#include <iostream>
-#include <stdio.h>
-#include <vector>
 
 class Hello {
  public:
